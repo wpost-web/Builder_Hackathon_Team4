@@ -1,39 +1,58 @@
 export function GoldCard() {
   return (
     <div
-      className="relative w-64 h-40 rounded-2xl shadow-2xl"
+      className="relative rounded-2xl shadow-2xl overflow-hidden"
       style={{
-        background: 'linear-gradient(135deg, #D4AC2C 0%, #F5D060 30%, #C9921A 55%, #E8C040 75%, #B8861A 100%)',
+        width: 260,
+        height: 164,
+        background: 'linear-gradient(135deg, #E8C840 0%, #F5D860 18%, #D4AC2C 35%, #C9921A 52%, #E2C03A 68%, #D4AC2C 80%, #B8861A 100%)',
         transform: 'rotate(-8deg)',
-        boxShadow: '0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.3)',
+        boxShadow: '0 24px 64px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.35)',
       }}
     >
-      {/* Card shine */}
+      {/* Top-left shine overlay */}
       <div
-        className="absolute inset-0 rounded-2xl"
+        className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 50%, rgba(0,0,0,0.1) 100%)',
+          background: 'linear-gradient(145deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.05) 40%, transparent 70%)',
         }}
       />
-      {/* Embossed circles */}
+
+      {/* Embossed watermark circles (bottom-right) */}
+      <div className="absolute bottom-3 right-4 flex -space-x-5 opacity-25">
+        <div className="w-20 h-20 rounded-full border-4 border-yellow-800" />
+        <div className="w-20 h-20 rounded-full border-4 border-yellow-800" />
+      </div>
+
+      {/* Card chip (top-left area) */}
       <div
-        className="absolute bottom-4 right-6 flex -space-x-4 opacity-30"
-      >
-        <div className="w-16 h-16 rounded-full border-4 border-yellow-700" />
-        <div className="w-16 h-16 rounded-full border-4 border-yellow-700" />
+        className="absolute top-5 left-5 w-8 h-6 rounded"
+        style={{
+          background: 'linear-gradient(135deg, rgba(180,130,20,0.6), rgba(120,90,10,0.5))',
+          border: '1px solid rgba(150,100,10,0.4)',
+        }}
+      />
+
+      {/* Member name + tier */}
+      <div className="absolute top-4 left-16">
+        <p className="text-yellow-950 text-[11px] font-semibold opacity-70 leading-tight">Julius Caesar</p>
+        <p className="text-yellow-950 text-[10px] opacity-60 leading-tight">Gold Member</p>
       </div>
-      {/* Card text */}
-      <div className="absolute top-4 left-5">
-        <p className="text-yellow-900 text-xs font-semibold opacity-80">Julius Caesar</p>
-        <p className="text-yellow-900 text-xs opacity-70">Gold Member</p>
-      </div>
-      <div className="absolute bottom-4 left-5">
+
+      {/* Card number "5000" */}
+      <div className="absolute bottom-5 left-5">
         <p
-          className="text-yellow-900 font-bold text-3xl opacity-70"
-          style={{ fontFamily: 'serif', letterSpacing: '0.05em' }}
+          className="text-yellow-950 font-black opacity-55"
+          style={{ fontSize: 36, letterSpacing: '0.04em', fontFamily: 'Georgia, serif' }}
         >
           5000
         </p>
+      </div>
+
+      {/* Caesars logo area (top-right) */}
+      <div className="absolute top-4 right-5 text-right">
+        <p className="text-yellow-950 text-[8px] font-bold opacity-50 tracking-widest uppercase">CAESARS</p>
+        <p className="text-yellow-950 text-[8px] font-bold opacity-40 tracking-widest uppercase">REWARDS</p>
       </div>
     </div>
   );
