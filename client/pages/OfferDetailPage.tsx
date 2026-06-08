@@ -70,10 +70,10 @@ export default function OfferDetailPage() {
               {/* Notch right */}
               <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-[#5A1010] rounded-full" />
 
-              {offer.title.toLowerCase().includes('entry') || offer.title.toLowerCase().includes('earning') ? (
-                <div className="flex flex-col items-center">
-                  <p className="text-caesars-gold text-3xl font-bold italic mb-3" style={{ fontFamily: 'serif' }}>Entries</p>
-                  <GoldIcon name={offer.icon} size={72} />
+              {offer.icon === 'Entries' ? (
+                <div className="flex flex-col items-center gap-2">
+                  <p className="text-caesars-gold text-3xl font-bold italic" style={{ fontFamily: 'Georgia, serif' }}>Entries</p>
+                  <GoldIcon name="Ticket" size={72} />
                 </div>
               ) : (
                 <GoldIcon name={offer.icon} size={80} />

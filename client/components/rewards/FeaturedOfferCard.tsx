@@ -32,10 +32,10 @@ export function FeaturedOfferCard({ offer }: FeaturedOfferCardProps) {
       className="flex-shrink-0 w-72 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer hover:shadow-md transition-shadow"
     >
       <div className="relative h-44 bg-gray-50 flex items-center justify-center">
-        {offer.title.toLowerCase().includes('entry') || offer.title.toLowerCase().includes('earning') ? (
-          <div className="flex flex-col items-center">
-            <p className="text-caesars-gold text-2xl font-bold italic" style={{ fontFamily: 'serif' }}>Entries</p>
-            <GoldIcon name={offer.icon} size={56} className="mt-2" />
+        {offer.icon === 'Entries' ? (
+          <div className="flex flex-col items-center gap-1">
+            <p className="text-caesars-gold text-2xl font-bold italic" style={{ fontFamily: 'Georgia, serif' }}>Entries</p>
+            <GoldIcon name="Ticket" size={60} />
           </div>
         ) : (
           <GoldIcon name={offer.icon} size={72} />
