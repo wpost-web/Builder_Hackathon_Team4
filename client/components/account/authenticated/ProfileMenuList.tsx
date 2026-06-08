@@ -20,12 +20,14 @@ export function ProfileMenuList() {
   ];
 
   return (
-    <div className="mx-4">
-      {items.map(({ label, sub, onClick }) => (
+    <div className="px-4">
+      {items.map(({ label, sub, onClick }, index) => (
         <button
           key={label}
           onClick={onClick}
-          className="w-full flex items-center justify-between py-4 border-b border-gray-100 hover:bg-gray-50 -mx-0 px-0 transition-colors"
+          className={`w-full flex items-center justify-between py-4 hover:bg-gray-50 transition-colors ${
+            index < items.length - 1 ? 'border-b border-gray-100' : ''
+          }`}
         >
           <div className="text-left">
             <p className="text-gray-900 text-base font-semibold">{label}</p>
@@ -36,7 +38,7 @@ export function ProfileMenuList() {
       ))}
       <button
         onClick={() => { signOutClicked(); logout(); }}
-        className="w-full text-left py-4 text-caesars-red text-sm font-medium hover:opacity-70 transition-opacity"
+        className="w-full text-left py-4 text-[#C0272D] text-sm font-medium hover:opacity-70 transition-opacity"
       >
         Sign out
       </button>
