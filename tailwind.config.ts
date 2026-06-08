@@ -19,6 +19,12 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        "caesars-red": "hsl(var(--caesars-red))",
+        "caesars-red-deep": "hsl(var(--caesars-red-deep))",
+        "caesars-gold": "hsl(var(--caesars-gold))",
+        "caesars-gold-light": "hsl(var(--caesars-gold-light))",
+        "caesars-dark": "hsl(var(--caesars-dark))",
+        "caesars-surface": "hsl(var(--caesars-surface))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
